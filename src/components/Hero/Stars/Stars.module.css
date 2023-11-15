@@ -18,9 +18,9 @@
   left: 50%;
   top: 50%;
   height: 2px;
-  background: linear-gradient(-45deg, #e2e2e2, rgba(0, 0, 255, 0));
+  background: linear-gradient(-45deg, #f3ff13, rgba(0, 0, 255, 0));
   border-radius: 999px;
-  filter: drop-shadow(0 0 6px #fffa69);
+  filter: drop-shadow(0 0 6px #11ffac);
   animation: tail 3000ms ease-in-out infinite,
     shooting 3000ms ease-in-out infinite;
 }
@@ -33,7 +33,7 @@
   background: linear-gradient(
     -45deg,
     rgba(0, 0, 255, 0),
-    #ffbcbc,
+    #01ffc8,
     rgba(0, 0, 255, 0)
   );
   transform: translateX(50%) rotateZ(45deg);
@@ -49,7 +49,7 @@
   background: linear-gradient(
     -45deg,
     rgba(0, 0, 255, 0),
-    rgb(198, 255, 187),
+    #01ffc8,
     rgba(0, 0, 255, 0)
   );
   transform: translateX(50%) rotateZ(45deg);

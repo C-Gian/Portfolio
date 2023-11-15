@@ -1,4 +1,10 @@
 @import "../../../vars.css";
 
+.titleContainer {
+  display: flex;
+  gap: 10px;
+}
+
 .title {
+  color: var(--color-extra);
 }

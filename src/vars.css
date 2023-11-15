@@ -3,8 +3,10 @@
   --color-text: #fff;
   --color-primary: #576cbc;
   --color-secondary: #19376d;
+  --color-tertiary: #fe3e57;
+  --color-extra: #0bd7ce;
   --color-dark: #0b2447;
-  --color-bg: #04152d;
+  --color-bg: #0a203d;
 
   /* fonts */
   --font-roboto: "Roboto";

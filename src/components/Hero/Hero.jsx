@@ -8,10 +8,19 @@ export const Hero = () => {
   return (
     <section className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Hi, C-Gian Here</h1>
+        <div className={styles.titleContainer}>
+          <h1 className={`${styles.title} ${styles.outside}`}>Hi,</h1>
+          <h1 className={`${styles.title} ${styles.inside}`}>C-Gian</h1>
+          <h1 className={`${styles.title} ${styles.outside}`}>Here</h1>
+        </div>
         <HackingEffect></HackingEffect>
       </div>
-      <Stars></Stars>
+      {/* <Stars></Stars> */}
+      <img
+        src={getImageUrl("hero/heroImage.png")}
+        alt="Hero Image"
+        className={styles.heroImage}
+      />
       <div className={styles.topBlur}></div>
       <div className={styles.bottomBlur}></div>
     </section>

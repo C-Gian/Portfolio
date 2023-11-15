@@ -12,7 +12,7 @@ function App() {
       <Navbar></Navbar>
       <Hero></Hero>
       <About></About>
-      <Experience></Experience>
+      {/* <Experience></Experience> */}
       <Projects></Projects>
       <Contact></Contact>
     </div>

@@ -1,26 +1,53 @@
 [
   {
-    "title": "Project A",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Air Quality Map",
+    "imageSrc": "projects/AirQualiyMap/start.png",
+    "description": "Project for environmental monitoring and analysis as a dissertation. ",
+    "skills": [
+      "React",
+      "Express",
+      "Node",
+      "Html",
+      "Css",
+      "Redux",
+      "APIs",
+      "MongoDB"
+    ],
+    "source": "https://github.com/C-Gian/AirQualityMap"
   },
   {
-    "title": "Project B",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node", "Sass"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Watchario",
+    "imageSrc": "projects/Watchario/watchario.jpeg",
+    "description": "Android app to let users manage their list of movies, TV series and anime.",
+    "skills": ["Java", "Android Studio", "Firebase"],
+    "source": "https://github.com/C-Gian/Watchario"
   },
   {
-    "title": "Project C",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Express", "Node"],
-    "demo": "https://www.example.com",
-    "source": "https://www.github.com"
+    "title": "Rhytm",
+    "imageSrc": "projects/Rhytm/start.PNG",
+    "description": "Discord multifunctional bot specialized in playing music from youtube",
+    "skills": ["Phyton", "APIs"],
+    "source": "https://github.com/C-Gian/PyDiscordMusicBot"
+  },
+  {
+    "title": "Gameshop",
+    "imageSrc": "projects/Gameshop/project.png",
+    "description": "Web App for selling video games [Exam project to learn web development]",
+    "skills": ["HTML", "Css", "Javascript", "JQuery", "PHP", "SQL"],
+    "source": "https://github.com/C-Gian/Gameshop"
+  },
+  {
+    "title": "Ricettario",
+    "imageSrc": "projects/Ricettario/ricettario.jpeg",
+    "description": "App to store and management recipes [Project to learn how to develop android applications]",
+    "skills": ["Java", "Firebase", "Android Studio"],
+    "source": "https://github.com/C-Gian/Ricettario"
+  },
+  {
+    "title": "Space Shooter",
+    "imageSrc": "projects/SpaceShooter/mid.png",
+    "description": "First python app, simple space shooter game",
+    "skills": ["Phyton"],
+    "source": "https://github.com/C-Gian/PySpaceShooter"
   }
 ]

@@ -27,7 +27,7 @@ export const HackingEffect = () => {
     "Student",
     "Software Dev. Enthusiast",
   ];
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const letters = "qazwsxedcrfvtgbyhnujmikolp";
   const [text, setText] = useState(words[0]);
   const [currentWord, setCurrentWord] = useState(1);
 
@@ -59,7 +59,7 @@ export const HackingEffect = () => {
       }
 
       iteration += 1 / 2;
-    }, 50);
+    }, 30);
   };
 
   // Utilizza l'hook useInterval per avviare l'effetto ogni 5 secondi
@@ -68,8 +68,11 @@ export const HackingEffect = () => {
   }, 5000);
 
   return (
-    <h1 id="random-text" className={styles.title}>
-      I'm a {text}
-    </h1>
+    <div className={styles.titleContainer}>
+      <h1>I'm a</h1>
+      <h1 id="random-text" className={styles.title}>
+        {text}
+      </h1>
+    </div>
   );
 };

@@ -2,13 +2,18 @@
 
 .container {
   position: relative;
-  background-color: rgba(12, 12, 12, 0.6);
+  background-color: rgba(165, 215, 232, 0.069);
   border-radius: 15px;
   padding: 73px;
   margin-top: 129px;
   z-index: 1;
   margin-left: 10%;
   margin-right: 10%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -19,14 +24,22 @@
   text-transform: uppercase;
 }
 
+.description {
+  color: var(--color-text);
+  font-size: 15px;
+}
+
 .content {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .aboutImage {
   width: 35%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .aboutItems {
@@ -89,4 +102,69 @@
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.tabsArea {
+  margin-top: 30px;
+}
+
+.tabs {
+  display: flex;
+  color: var(--color-text);
+  gap: 80px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.tabs .tab {
+  position: relative;
+  margin: 0 10px;
+  display: inline-block;
+  padding-bottom: 5px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in;
+}
+
+ul.tabs li:before {
+  position: absolute;
+  content: "";
+  width: 30px;
+  background: rgba(255, 255, 255, 0.587);
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  height: 2px;
+  bottom: 0;
+}
+
+.react-tabs__tab--selected {
+  background: #fff;
+  border-color: #aaa;
+  color: #f9004d;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.tabContent {
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.tabContent ul li {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: inherit;
+  margin-bottom: 15px;
+  font-weight: 300;
+  list-style: none;
+}
+
+.tabContent ul li a {
+  font-weight: 500;
+  display: block;
+  color: #ffffff;
+  transition: all 0.4s ease-in-out 0s;
+  text-decoration: none;
 }
