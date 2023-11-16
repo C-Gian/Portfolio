@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getImageUrl } from "../../utils";
 import "./About.css";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { AnimatePresence, motion } from "framer-motion";
 
 const tabs = [
@@ -11,6 +12,7 @@ const tabs = [
       return (
         <div className="tab-container">
           <div className="skill-container">
+            <h1 className="skill-title">Front-end</h1>
             <div className="skill-images-container">
               <div className="skill-item">
                 <img
@@ -44,6 +46,20 @@ const tabs = [
                 />
                 <div className="skill-text">JavaScript</div>
               </div>
+            </div>
+          </div>
+          <div className="skill-container">
+            <h1 className="skill-title">Back-end</h1>
+            <div className="skill-images-container">
+              <div className="skill-item">
+                <img
+                  src={getImageUrl("about/skills/js.png")}
+                  alt="JavaScript"
+                  className="skill-icon"
+                />
+                <div className="skill-text">JavaScript</div>
+              </div>
+
               <div className="skill-item">
                 <img
                   src={getImageUrl("about/skills/python.png")}
@@ -68,13 +84,27 @@ const tabs = [
                 />
                 <div className="skill-text">MongoDB</div>
               </div>
+            </div>
+          </div>
+          <div className="skill-container">
+            <h1 className="skill-title">Extra</h1>
+            <div className="skill-images-container">
               <div className="skill-item">
                 <img
-                  src={getImageUrl("about/skills/androidStudio.png")}
-                  alt="AndroidStudio"
+                  src={getImageUrl("about/skills/bot.png")}
+                  alt="Discord"
                   className="skill-icon"
                 />
-                <div className="skill-text">AndroidStudio</div>
+                <div className="skill-text">Bots</div>
+              </div>
+
+              <div className="skill-item">
+                <img
+                  src={getImageUrl("about/skills/games.png")}
+                  alt="Games"
+                  className="skill-icon"
+                />
+                <div className="skill-text">Games</div>
               </div>
             </div>
           </div>
@@ -147,19 +177,27 @@ const tabs = [
     label: "Certification",
     render: () => {
       return (
-        <div className="hor-tab">
-          {/* <div className="hor-element">
-            <h1 className="tab-text">React Certification</h1>
-            <h1 className="tab-text sub">HackerRank</h1>
-          </div>
-          <div className="hor-element">
-            <h1 className="tab-text">JavaScript</h1>
-            <h1 className="tab-text sub">CodeWars</h1>
-          </div>
-          <div className="hor-element">
-            <h1 className="tab-text">Python</h1>
-            <h1 className="tab-text sub">LeetCode</h1>
-          </div> */}
+        <div className="tab-container">
+          <ul className="tab-list">
+            <li className="tab-element">
+              <div className="tab-texts">
+                <h1 className="tab-text">React Certification</h1>
+                <h1 className="tab-text sub">HackerRank</h1>
+              </div>
+            </li>
+            <li className="tab-element">
+              <div className="tab-texts">
+                <h1 className="tab-text">JavaScript</h1>
+                <h1 className="tab-text sub">CodeWars</h1>
+              </div>
+            </li>
+            <li className="tab-element">
+              <div className="tab-texts">
+                <h1 className="tab-text">Python</h1>
+                <h1 className="tab-text sub">LeetCode</h1>
+              </div>
+            </li>
+          </ul>
         </div>
       );
     },
@@ -195,15 +233,15 @@ export const About = () => {
   return (
     <section className="container" id="about">
       <div className="content">
-        <div className="about-image-container">
-          <img
-            src={getImageUrl("about/aboutImage.jpg")}
-            alt="Me sitting with a laptop"
-            className="about-image"
-          />
-        </div>
         <div className="about">
-          <div className="about-td">
+          <div className="about-image-container">
+            <img
+              src={getImageUrl("about/aboutImage.jpg")}
+              alt="Me sitting with a laptop"
+              className="about-image"
+            />
+          </div>
+          <div>
             <h1 className="title">About Me</h1>
             <h1 className="description">
               I am a computer science graduate student looking for my first job.
@@ -212,39 +250,39 @@ export const About = () => {
               development.
             </h1>
           </div>
-          <div className="about-tab">
-            <div className="tab-wrapper">
-              <div className="tab-header">
-                {tabs.map((tab) => (
-                  <div
-                    key={tab.name}
-                    className={`tab-item ${isSelected(tab) ? "selected" : ""}`}
-                  >
-                    <h1 onClick={(e) => handleClick(e, tab)}>{tab.label}</h1>
+        </div>
+        <div className="about-tab">
+          <div className="tab-wrapper">
+            <div className="tab-header">
+              {tabs.map((tab) => (
+                <div
+                  key={tab.name}
+                  className={`tab-item ${isSelected(tab) ? "selected" : ""}`}
+                >
+                  <h1 onClick={(e) => handleClick(e, tab)}>{tab.label}</h1>
 
-                    {isSelected(tab) && (
-                      <motion.div layoutId="indicator" className="indicator" />
-                    )}
-                  </div>
-                ))}
-              </div>
+                  {isSelected(tab) && (
+                    <motion.div layoutId="indicator" className="indicator" />
+                  )}
+                </div>
+              ))}
+            </div>
 
-              <div className="tab-content">
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeTab.name || "empty"}
-                    variants={tabContentVariants}
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                    transition={{
-                      duration: 0.3,
-                    }}
-                  >
-                    {activeTab && activeTab?.render()}
-                  </motion.div>
-                </AnimatePresence>
-              </div>
+            <div className="tab-content">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab.name || "empty"}
+                  variants={tabContentVariants}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  transition={{
+                    duration: 0.3,
+                  }}
+                >
+                  {activeTab && activeTab?.render()}
+                </motion.div>
+              </AnimatePresence>
             </div>
           </div>
         </div>
