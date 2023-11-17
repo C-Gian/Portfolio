@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
+import "./Navbar.css";
 import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setmenuOpen] = useState(false);
   const [isNavbarShrunk, setNavbarShrunk] = useState(false);
 
   useEffect(() => {
@@ -22,45 +22,40 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav className={`${styles.navbar} ${isNavbarShrunk ? styles.shrink : ""}`}>
-      <div className={styles.navbarContent}>
-        <a href="/" className={styles.titleContainer}>
-          <h1 className={`${styles.title} ${styles.outside}`}>&lt;/</h1>
-          <h1 className={`${styles.title} ${styles.inside}`}>Portfolio</h1>
-          <h1 className={`${styles.title} ${styles.outside}`}>&gt;</h1>
+    <nav className={`navbar ${isNavbarShrunk ? "nav-shrink" : ""}`}>
+      <div className="navbarContent">
+        <a href="/" className="nav-titleContainer">
+          <h1 className="nav-title">&lt;/</h1>
+          <h1 className="nav-title nav-inside">Portfolio</h1>
+          <h1 className="nav-title">&gt;</h1>
         </a>
-        <div className={styles.menu}>
+        <div className="nav-menu">
           <img
-            className={styles.menuBtn}
+            className="nav-menuBtn"
             src={
               menuOpen
                 ? getImageUrl("nav/closeIcon.png")
-                : getImageUrl("nav/menuIcon.png")
+                : getImageUrl("nav/nav-menuIcon.png")
             }
-            alt="menu-button"
-            onClick={() => setMenuOpen(!menuOpen)}
+            alt="nav-menu-button"
+            onClick={() => setnav - menuOpen(!menuOpen)}
           />
           <ul
-            className={`${styles.menuItems} ${menuOpen && styles.menuOpen}`}
-            onClick={() => setMenuOpen(false)}
+            className={`nav-menuItems ${menuOpen ? "nav-menuOpen" : ""}`}
+            onClick={() => setnav - menuOpen(false)}
           >
             <li>
-              <a href="#about" className={styles.menuItem}>
+              <a href="#about" className="nav-menuItem">
                 About
               </a>
             </li>
             <li>
-              <a href="#experience" className={styles.menuItem}>
-                Experience
-              </a>
-            </li>
-            <li>
-              <a href="#projects" className={styles.menuItem}>
+              <a href="#projects" className="nav-menuItem">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#contact" className={styles.menuItem}>
+              <a href="#contact" className="nav-menuItem">
                 Contact
               </a>
             </li>

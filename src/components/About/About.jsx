@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { getImageUrl } from "../../utils";
 import "./About.css";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { AnimatePresence, motion } from "framer-motion";
 
 const tabs = [
@@ -10,101 +9,106 @@ const tabs = [
     label: "Main Skills",
     render: () => {
       return (
-        <div className="tab-container">
-          <div className="skill-container">
-            <h1 className="skill-title">Front-end</h1>
-            <div className="skill-images-container">
-              <div className="skill-item">
+        <div className="about-tab-container">
+          <div className="about-tab-skill-container">
+            <h1 className="about-tab-skill-title">Front-end</h1>
+            <div className="about-tab-skill-images-container">
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/html.png")}
                   alt="HTML"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">HTML</div>
+                <div className="about-tab-skill-text">HTML</div>
               </div>
-              <div className="skill-item">
+
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/css.png")}
                   alt="CSS"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">CSS</div>
+                <div className="about-tab-skill-text">CSS</div>
               </div>
-              <div className="skill-item">
+
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/react.png")}
                   alt="React"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">React</div>
+                <div className="about-tab-skill-text">React</div>
               </div>
-              <div className="skill-item">
+
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/js.png")}
                   alt="JavaScript"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">JavaScript</div>
+                <div className="about-tab-skill-text">JavaScript</div>
               </div>
             </div>
           </div>
-          <div className="skill-container">
-            <h1 className="skill-title">Back-end</h1>
-            <div className="skill-images-container">
-              <div className="skill-item">
+          <div className="about-tab-skill-container">
+            <h1 className="about-tab-skill-title">Back-end</h1>
+            <div className="about-tab-skill-images-container">
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/js.png")}
                   alt="JavaScript"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">JavaScript</div>
+                <div className="about-tab-skill-text">JavaScript</div>
               </div>
 
-              <div className="skill-item">
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/python.png")}
                   alt="Python"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">Python</div>
+                <div className="about-tab-skill-text">Python</div>
               </div>
-              <div className="skill-item">
+
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/java.png")}
                   alt="Java"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">Java</div>
+                <div className="about-tab-skill-text">Java</div>
               </div>
-              <div className="skill-item">
+
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/mongodb.png")}
                   alt="MongoDB"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">MongoDB</div>
+                <div className="about-tab-skill-text">MongoDB</div>
               </div>
             </div>
           </div>
-          <div className="skill-container">
-            <h1 className="skill-title">Extra</h1>
-            <div className="skill-images-container">
-              <div className="skill-item">
+          <div className="about-tab-skill-container">
+            <h1 className="about-tab-skill-title">Extra</h1>
+            <div className="about-tab-skill-images-container">
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/bot.png")}
                   alt="Discord"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">Bots</div>
+                <div className="about-tab-skill-text">Bots</div>
               </div>
 
-              <div className="skill-item">
+              <div className="about-tab-skill-item">
                 <img
                   src={getImageUrl("about/skills/games.png")}
                   alt="Games"
-                  className="skill-icon"
+                  className="about-tab-skill-icon"
                 />
-                <div className="skill-text">Games</div>
+                <div className="about-tab-skill-text">Games</div>
               </div>
             </div>
           </div>
@@ -117,22 +121,24 @@ const tabs = [
     label: "Education",
     render: () => {
       return (
-        <div className="tab-container">
-          <ul className="tab-list">
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">
+        <div className="about-tab-container">
+          <ul className="about-tab-list">
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">
                   High school diploma technical institute
                 </h1>
-                <h1 className="tab-text sub">Rome, IPSSEOA Amerigo Vespucci</h1>
+                <h1 className="about-tab-text sub">
+                  Rome, IPSSEOA Amerigo Vespucci
+                </h1>
               </div>
             </li>
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">
                   Bachelor's degree in computer science
                 </h1>
-                <h1 className="tab-text sub">
+                <h1 className="about-tab-text sub">
                   Rome, La Sapienza university of Rome, 2019 - 2023
                 </h1>
               </div>
@@ -147,24 +153,24 @@ const tabs = [
     label: "Experience",
     render: () => {
       return (
-        <div className="tab-container">
-          <ul className="tab-list">
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">
+        <div className="about-tab-container">
+          <ul className="about-tab-list">
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">
                   Internship for thesis development and graduation
                 </h1>
-                <h1 className="tab-text sub">
+                <h1 className="about-tab-text sub">
                   Rome, La Sapienza university of Rome, 04/23 - 10/23
                 </h1>
               </div>
             </li>
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">
                   Looking for the first work experience
                 </h1>
-                <h1 className="tab-text sub"></h1>
+                <h1 className="about-tab-text sub"></h1>
               </div>
             </li>
           </ul>
@@ -177,24 +183,24 @@ const tabs = [
     label: "Certification",
     render: () => {
       return (
-        <div className="tab-container">
-          <ul className="tab-list">
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">React Certification</h1>
-                <h1 className="tab-text sub">HackerRank</h1>
+        <div className="about-tab-container">
+          <ul className="about-tab-list">
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">React Certification</h1>
+                <h1 className="about-tab-text sub">HackerRank</h1>
               </div>
             </li>
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">JavaScript</h1>
-                <h1 className="tab-text sub">CodeWars</h1>
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">JavaScript</h1>
+                <h1 className="about-tab-text sub">CodeWars</h1>
               </div>
             </li>
-            <li className="tab-element">
-              <div className="tab-texts">
-                <h1 className="tab-text">Python</h1>
-                <h1 className="tab-text sub">LeetCode</h1>
+            <li className="about-tab-element">
+              <div className="about-tab-texts">
+                <h1 className="about-tab-text">Python</h1>
+                <h1 className="about-tab-text sub">LeetCode</h1>
               </div>
             </li>
           </ul>
@@ -220,20 +226,20 @@ const tabContentVariants = {
 };
 
 export const About = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [activetab, setActivetab] = useState(tabs[0]);
 
   const handleClick = (e, tab) => {
     e.preventDefault();
 
-    setActiveTab(tab);
+    setActivetab(tab);
   };
 
-  const isSelected = (tab) => activeTab.name === tab.name;
+  const isSelected = (tab) => activetab.name === tab.name;
 
   return (
-    <section className="container" id="about">
-      <div className="content">
-        <div className="about">
+    <section className="about-container" id="about">
+      <div className="about-content">
+        <div className="about-image-extrainfo">
           <div className="about-image-container">
             <img
               src={getImageUrl("about/aboutImage.jpg")}
@@ -241,23 +247,25 @@ export const About = () => {
               className="about-image"
             />
           </div>
+        </div>
+        <div className="about-tab-info">
           <div>
-            <h1 className="title">About Me</h1>
-            <h1 className="description">
+            <h1 className="about-title">About Me</h1>
+            <h1 className="about-description">
               I am a computer science graduate student looking for my first job.
               I would like to work as a front-end or back-end developer, but any
               kind of development fascinates me, especially video game
               development.
             </h1>
           </div>
-        </div>
-        <div className="about-tab">
-          <div className="tab-wrapper">
-            <div className="tab-header">
+          <div className="about-tab-wrapper">
+            <div className="about-tab-header">
               {tabs.map((tab) => (
                 <div
                   key={tab.name}
-                  className={`tab-item ${isSelected(tab) ? "selected" : ""}`}
+                  className={`about-tab-item ${
+                    isSelected(tab) ? "about-selected" : ""
+                  }`}
                 >
                   <h1 onClick={(e) => handleClick(e, tab)}>{tab.label}</h1>
 
@@ -268,10 +276,10 @@ export const About = () => {
               ))}
             </div>
 
-            <div className="tab-content">
+            <div className="about-tab-content">
               <AnimatePresence mode="wait">
                 <motion.div
-                  key={activeTab.name || "empty"}
+                  key={activetab.name || "empty"}
                   variants={tabContentVariants}
                   initial="initial"
                   animate="enter"
@@ -280,7 +288,7 @@ export const About = () => {
                     duration: 0.3,
                   }}
                 >
-                  {activeTab && activeTab?.render()}
+                  {activetab && activetab?.render()}
                 </motion.div>
               </AnimatePresence>
             </div>

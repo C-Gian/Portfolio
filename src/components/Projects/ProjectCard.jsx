@@ -6,28 +6,28 @@ export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
   return (
-    <div className="container">
+    <div className="pj-container">
       <img
         src={getImageUrl(imageSrc)}
         alt={`Image of ${title} `}
-        className="image"
+        className="pg-image"
       />
-      <h3 className="title">{title}</h3>
-      <p className="description">{description}</p>
-      <ul className="skills">
+      <h3 className="pg-title">{title}</h3>
+      <p className="pg-description">{description}</p>
+      <ul className="pg-skills">
         {skills.map((skill, id) => {
           return (
-            <li key={id} className="skill">
+            <li key={id} className="pg-skill">
               {skill}
             </li>
           );
         })}
       </ul>
-      <div className="links">
-        <a href={demo} className="link">
+      <div className="pg-links">
+        <a href={demo} className="pg-link">
           Demo
         </a>
-        <a href={source} className="link">
+        <a href={source} className="pg-link">
           Soruce
         </a>
       </div>

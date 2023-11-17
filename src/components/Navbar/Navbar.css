@@ -10,7 +10,7 @@
   transition: padding 0.3s ease-in-out; /* Aggiungi una transizione per l'animazione dell'altezza */
 }
 
-.shrink {
+.nav-shrink {
   padding-top: 10px;
   background-color: var(--color-bg);
   box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
@@ -26,45 +26,45 @@
   transition: height 0.3s ease-in-out; /* Aggiungi una transizione per l'animazione dell'altezza */
 }
 
-.titleContainer {
+.nav-titleContainer {
   display: flex;
   text-decoration: none;
 }
 
-.title {
+.nav-title {
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
   color: var(--color-text);
 }
 
-.inside {
+.nav-inside {
   color: var(--color-tertiary);
 }
 
-.menu {
+.nav-menu {
   display: flex;
 }
 
-.menuBtn {
+.nav-menuBtn {
   display: none;
 }
 
-.menuItems {
+.nav-menuItems {
   display: flex;
   gap: 47px;
   list-style: none;
 }
 
-.menuItem {
+.nav-menuItem {
   transition: color 0.3s ease;
 }
 
-.menuItem:hover {
+.nav-menuItem:hover {
   color: var(--color-tertiary);
 }
 
-.menuItems a {
+.nav-menuItems a {
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
@@ -76,7 +76,7 @@
     align-items: flex-start;
   }
 
-  .menu {
+  .nav-menu {
     position: absolute;
     right: 0;
     margin-right: 10%;
@@ -86,12 +86,12 @@
     z-index: 3;
   }
 
-  .menuBtn {
+  .nav-menuBtn {
     display: block;
     cursor: pointer;
   }
 
-  .menuItems {
+  .nav-menuItems {
     display: none;
     flex-direction: column;
     align-items: center;
@@ -107,7 +107,7 @@
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
   }
 
-  .menuOpen {
+  .nav-menuOpen {
     display: flex;
     z-index: 1;
   }

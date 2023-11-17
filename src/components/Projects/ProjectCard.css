@@ -1,6 +1,6 @@
 @import "../../vars.css";
 
-.container {
+.pj-container {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
@@ -10,22 +10,22 @@
   max-width: 345px;
 }
 
-.image {
+.pg-image {
   margin-bottom: 26px;
 }
 
-.title {
+.pg-title {
   font-size: 25px;
   font-weight: 700;
 }
 
-.description {
+.pg-description {
   margin-top: 6px;
   font-size: 25px;
   font-weight: 400;
 }
 
-.skills {
+.pg-skills {
   width: 100%;
   margin-top: 14px;
   display: flex;
@@ -35,7 +35,7 @@
   list-style: none;
 }
 
-.skill {
+.pg-skill {
   font-size: 25px;
   font-weight: 400;
   border-radius: 100px;
@@ -43,14 +43,14 @@
   padding: 2px 22px;
 }
 
-.links {
+.pg-links {
   width: 100%;
   margin-top: 26px;
   display: flex;
   justify-content: space-around;
 }
 
-.link {
+.pg-link {
   text-decoration: none;
   color: var(--color-text);
   font-size: 30px;
