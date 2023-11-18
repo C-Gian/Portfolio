@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Almarose Light Regular";
-  src: url("/fonts/Almarose Light Regular.otf") format("otf"); /* Assicurati di specificare il formato corretto */
+  font-family: "Almarose-Thin";
+  src: url("src/public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 @font-face {
-  font-family: "Almarose-Bold";
-  src: url("/fonts/Almarose-Bold.otf") format("otf"); /* Assicurati di specificare il formato corretto */
+  font-family: "AlmaroseB";
+  src: url("src/public/fonts/AlmaroseB.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 :root {
@@ -16,10 +16,10 @@
   --color-tertiary: #fe3e57;
   --color-extra: #0bd7ce;
   --color-dark: #0b2447;
-  --color-bg: #141416;
+  --color-bg: #1a1a1a;
 
   /* fonts */
   --font-roboto: "Roboto";
-  --font-almaroselight: "Almarose Light Regular";
-  --font-almarosebold: "Almarose-Bold";
+  --font-text-main: "Almarose-Thin";
+  --font-text-title: "AlmaroseB";
 }

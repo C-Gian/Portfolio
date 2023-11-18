@@ -4,27 +4,11 @@ import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
   const [menuOpen, setmenuOpen] = useState(false);
-  const [isNavbarShrunk, setNavbarShrunk] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-
-      // Imposta isNavbarShrunk a true quando la posizione dello scroll è maggiore di 100px
-      setNavbarShrunk(scrollPosition > 100);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
-    <nav className={`navbar ${isNavbarShrunk ? "nav-shrink" : ""}`}>
-      <div className="navbarContent">
-        <a href="/" className="nav-titleContainer">
+    <nav className="nav">
+      <div className="navbar-content">
+        <a href="/" className="nav-title-container">
           <h1 className="nav-title">&lt;/</h1>
           <h1 className="nav-title nav-inside">Portfolio</h1>
           <h1 className="nav-title">&gt;</h1>

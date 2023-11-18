@@ -1,32 +1,31 @@
 @import "../../vars.css";
 
-.navbar {
-  position: fixed;
+.nav {
+  position: sticky;
   width: 100%;
-  height: fit-content;
-  padding-top: 30px;
-  padding-bottom: 10px;
+  top: 0;
+  height: 6rem;
   z-index: 2;
-  transition: padding 0.3s ease-in-out; /* Aggiungi una transizione per l'animazione dell'altezza */
+  position: -webkit-sticky;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #1a1a1a;
+  background-color: rgba(40, 40, 40, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav-shrink {
-  padding-top: 10px;
-  background-color: #141416d4;
-  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
-}
-
-.navbarContent {
+.navbar-content {
   display: flex;
+  height: 100%;
   padding: 10px;
   margin-left: 15%;
   margin-right: 15%;
   justify-content: space-between;
   align-items: center;
-  transition: height 0.3s ease-in-out; /* Aggiungi una transizione per l'animazione dell'altezza */
 }
 
-.nav-titleContainer {
+.nav-title-container {
   display: flex;
   text-decoration: none;
 }

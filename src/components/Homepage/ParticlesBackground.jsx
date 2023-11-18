@@ -17,7 +17,7 @@ export const ParticlesBackground = () => {
         },
         particles: {
           number: {
-            value: 15, // Number of Particles (count)
+            value: 65, // Number of Particles (count)
             density: {
               enable: true,
               value_area: 300, // Area where particles will be distributed
@@ -25,7 +25,7 @@ export const ParticlesBackground = () => {
           },
 
           color: {
-            value: "#ffffff", // Particles color
+            value: ["#fe3e57", "#51a1e9"],
           },
           shape: {
             type: "triangle", // Shape type
@@ -41,12 +41,12 @@ export const ParticlesBackground = () => {
             },
           },
           size: {
-            value: 5, // Base size of particles
+            value: 3, // Base size of particles
             random: true,
             anim: {
               enable: true,
               speed: 4,
-              size_min: 0.3,
+              size_min: 0.5,
               sync: false,
             },
           },
@@ -54,8 +54,8 @@ export const ParticlesBackground = () => {
           // Connecting lines
           line_linked: {
             enable: true,
-            distance: 150, // Maximum distance between linked particles
-            color: "#ffffff",
+            distance: 45, // Maximum distance between linked particles
+            color: "random",
             opacity: 0.4,
             width: 1,
           },

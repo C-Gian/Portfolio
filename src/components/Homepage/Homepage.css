@@ -1,9 +1,11 @@
 @import "../../vars.css";
 
 .home-container {
+  display: flex;
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  justify-content: center;
 }
 
 #tsparticles {
@@ -14,6 +16,21 @@
 
 .home-center-container {
   display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  z-index: 1;
+  margin-left: 15%;
+  margin-right: 15%;
+  color: var(--color-text);
+  letter-spacing: 2.5px;
+  gap: 50px;
+}
+
+.home-center-texts {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -23,18 +40,20 @@
   font-size: 72px;
   font-weight: 900;
   white-space: nowrap;
-  font-family: var(--font-almaroselight);
+  font-family: var(--font-text-main);
 }
 
 .home-hack-text {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-subtitle {
   font-size: 50px;
   font-weight: 600;
   white-space: nowrap;
-  font-family: var(--font-almarosebold);
+  font-family: var(--font-text-title);
 }
 
 @media screen and (max-width: 830px) {

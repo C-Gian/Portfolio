@@ -69,9 +69,8 @@ export const HackingEffect = () => {
 
   return (
     <div className="hack-title-container">
-      <h1>I'm a</h1>
       <h1 id="random-text" className="hack-title">
-        {text}
+        {text + "."}
       </h1>
     </div>
   );

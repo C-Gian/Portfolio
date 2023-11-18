@@ -9,8 +9,8 @@ import { Contact } from "./components/Contact/Contact";
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
       <Homepage></Homepage>
+      <Navbar></Navbar>
       <About></About>
       {/* <Experience></Experience> */}
       <Projects></Projects>
