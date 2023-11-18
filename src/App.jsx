@@ -1,5 +1,5 @@
-import styles from "./App.module.css";
-import { Hero } from "./components/Hero/Hero";
+import "./App.css";
+import { Homepage } from "./components/Homepage/Homepage";
 import { Navbar } from "./components/Navbar/Navbar";
 import { About } from "./components/About/About";
 import { Experience } from "./components/Experience/Experience";
@@ -8,9 +8,9 @@ import { Contact } from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className="App">
       <Navbar></Navbar>
-      <Hero></Hero>
+      <Homepage></Homepage>
       <About></About>
       {/* <Experience></Experience> */}
       <Projects></Projects>

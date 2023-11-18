@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import styles from "./HackingEffect.module.css";
+import "./HackingEffect.css";
 
 // Hook personalizzato per gestire un intervallo
 function useInterval(callback, delay) {
@@ -68,9 +68,9 @@ export const HackingEffect = () => {
   }, 5000);
 
   return (
-    <div className={styles.titleContainer}>
+    <div className="hack-title-container">
       <h1>I'm a</h1>
-      <h1 id="random-text" className={styles.title}>
+      <h1 id="random-text" className="hack-title">
         {text}
       </h1>
     </div>

@@ -13,11 +13,17 @@
     "@fontsource/outfit": "^5.0.8",
     "@fontsource/roboto": "^5.0.8",
     "framer-motion": "^10.16.5",
+    "gsap": "^3.12.2",
+    "particles.js": "^2.0.0",
     "portfolio": "file:",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-particles": "^2.12.2",
+    "react-spring": "^9.7.3",
     "react-tabs": "^6.0.2",
-    "sass": "^1.69.5"
+    "react-tsparticles": "^2.12.2",
+    "sass": "^1.69.5",
+    "tsparticles": "^2.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

@@ -1,0 +1,48 @@
+@import "../../vars.css";
+
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#tsparticles {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+
+.home-center-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  font-size: 72px;
+  font-weight: 900;
+  white-space: nowrap;
+  font-family: var(--font-almaroselight);
+}
+
+.home-hack-text {
+  display: flex;
+}
+
+.home-subtitle {
+  font-size: 50px;
+  font-weight: 600;
+  white-space: nowrap;
+  font-family: var(--font-almarosebold);
+}
+
+@media screen and (max-width: 830px) {
+  .home-container {
+    flex-direction: column-reverse;
+  }
+
+  .home-content {
+    align-items: center;
+  }
+}

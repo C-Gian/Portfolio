@@ -1,5 +1,15 @@
 @import "./vars.css";
 
+body {
+  background: gray;
+  height: 100%;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
 .App {
   background-color: var(--color-bg);
   width: 100%;
