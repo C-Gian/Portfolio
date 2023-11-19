@@ -5,7 +5,7 @@
   width: 100%;
   top: 0;
   height: 6rem;
-  z-index: 2;
+  z-index: 20;
   position: -webkit-sticky;
   align-items: center;
   justify-content: space-between;

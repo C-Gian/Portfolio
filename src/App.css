@@ -1,5 +1,9 @@
 @import "./vars.css";
 
+html {
+  scroll-padding-top: 8rem;
+}
+
 body {
   background: gray;
   height: 100%;
@@ -11,6 +15,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+}
+
+#tsparticles-main {
+  position: absolute;
+  height: 100%;
+  z-index: 5;
 }
 
 .App {

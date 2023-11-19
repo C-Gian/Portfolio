@@ -14,9 +14,11 @@ export const Homepage = () => {
             <HackingEffect></HackingEffect>
           </div>
         </div>
-        <h1 className="home-subtitle">Scroll Down</h1>
+        <div className="home-arrow">
+          <a href="#about"></a>
+        </div>
       </div>
-      <ParticlesBackground></ParticlesBackground>
+      <ParticlesBackground type={"home"}></ParticlesBackground>
     </div>
   );
 };

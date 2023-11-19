@@ -5,10 +5,12 @@ import { About } from "./components/About/About";
 import { Experience } from "./components/Experience/Experience";
 import { Projects } from "./components/Projects/Projects";
 import { Contact } from "./components/Contact/Contact";
+import { ParticlesBackground } from "./components/Homepage/ParticlesBackground";
 
 function App() {
   return (
     <div className="App">
+      <ParticlesBackground type={"main"}></ParticlesBackground>
       <Homepage></Homepage>
       <Navbar></Navbar>
       <About></About>
