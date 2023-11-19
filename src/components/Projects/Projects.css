@@ -1,0 +1,73 @@
+@import "../../vars.css";
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow-x: hidden;
+  gap: 60px;
+  z-index: 10;
+}
+
+.projects-t-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.projects-t-container h1 {
+  font-size: 70px;
+  color: var(--color-text);
+  font-family: var(--font-text-title);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 20px;
+}
+.projects-t-container h1:before {
+  background-color: #0bd7ce;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 110px;
+  margin-bottom: 5px;
+}
+.projects-t-container h1:after {
+  background-color: #fe3e57;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 110px;
+  margin-bottom: 0.25em;
+}
+
+.projects {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}

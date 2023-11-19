@@ -7,7 +7,6 @@ export const ParticlesBackground = ({ type }) => {
     await loadFull(engine);
   }, []);
 
-  console.log(type == "home");
   const option =
     type == "home"
       ? {
@@ -138,6 +137,14 @@ export const ParticlesBackground = ({ type }) => {
                 size_min: 0.5,
                 sync: false,
               },
+            },
+            // Connecting lines
+            line_linked: {
+              enable: true,
+              distance: 15, // Maximum distance between linked particles
+              color: "#00ff00",
+              opacity: 0.4,
+              width: 1,
             },
             move: {
               enable: true,

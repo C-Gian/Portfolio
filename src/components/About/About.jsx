@@ -3,121 +3,22 @@ import { getImageUrl } from "../../utils";
 import "./About.css";
 import { AnimatePresence, motion } from "framer-motion";
 
+{
+  /* <div className="about-tab-container">
+          <div className="about-tab-skill-container">
+            
+          </div>
+          <div className="about-tab-skill-container">
+            
+          </div>
+          <div className="about-tab-skill-container">
+            
+          </div>
+        </div> */
+}
 const tabs = [
   {
     name: "tab1",
-    label: "Main Skills",
-    render: () => {
-      return (
-        <div className="about-tab-container">
-          <div className="about-tab-skill-container">
-            <h1 className="about-tab-skill-title">Front-end</h1>
-            <div className="about-tab-skill-images-container">
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/html.png")}
-                  alt="HTML"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">HTML</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/css.png")}
-                  alt="CSS"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">CSS</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/react.png")}
-                  alt="React"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">React</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/js.png")}
-                  alt="JavaScript"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">JavaScript</div>
-              </div>
-            </div>
-          </div>
-          <div className="about-tab-skill-container">
-            <h1 className="about-tab-skill-title">Back-end</h1>
-            <div className="about-tab-skill-images-container">
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/js.png")}
-                  alt="JavaScript"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">JavaScript</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/python.png")}
-                  alt="Python"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">Python</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/java.png")}
-                  alt="Java"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">Java</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/mongodb.png")}
-                  alt="MongoDB"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">MongoDB</div>
-              </div>
-            </div>
-          </div>
-          <div className="about-tab-skill-container">
-            <h1 className="about-tab-skill-title">Extra</h1>
-            <div className="about-tab-skill-images-container">
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/bot.png")}
-                  alt="Discord"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">Bots</div>
-              </div>
-
-              <div className="about-tab-skill-item">
-                <img
-                  src={getImageUrl("about/skills/games.png")}
-                  alt="Games"
-                  className="about-tab-skill-icon"
-                />
-                <div className="about-tab-skill-text">Games</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      );
-    },
-  },
-  {
-    name: "tab2",
     label: "Education",
     render: () => {
       return (
@@ -149,7 +50,7 @@ const tabs = [
     },
   },
   {
-    name: "tab3",
+    name: "tab2",
     label: "Experience",
     render: () => {
       return (
@@ -179,7 +80,7 @@ const tabs = [
     },
   },
   {
-    name: "tab4",
+    name: "tab3",
     label: "Certification",
     render: () => {
       return (
@@ -197,6 +98,8 @@ const tabs = [
                 <h1 className="about-tab-text sub">CodeWars</h1>
               </div>
             </li>
+          </ul>
+          <ul className="about-tab-list">
             <li className="about-tab-element">
               <div className="about-tab-texts">
                 <h1 className="about-tab-text">Python</h1>
@@ -238,7 +141,153 @@ export const About = () => {
 
   return (
     <section className="about-container" id="about">
-      <div className="about-content">
+      <div className="about-t-container">
+        <h1>About Me</h1>
+      </div>
+      <div className="about-b-container">
+        <div className="about-lr-container">
+          <img
+            src={getImageUrl("about/aboutImage.jpg")}
+            alt="Me sitting with a laptop"
+            className="about-image"
+          />
+          <h1 className="about-description">
+            I am a computer science graduate student looking for my first
+            front-end/back-end developer job.
+          </h1>
+          <div className="about-tab-wrapper">
+            <div className="about-tab-header">
+              {tabs.map((tab) => (
+                <div
+                  key={tab.name}
+                  className={`about-tab-item ${
+                    isSelected(tab) ? "about-selected" : ""
+                  }`}
+                >
+                  <h1 onClick={(e) => handleClick(e, tab)}>{tab.label}</h1>
+
+                  {isSelected(tab) && (
+                    <motion.div layoutId="indicator" className="indicator" />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <div className="about-tab-content">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activetab.name || "empty"}
+                  variants={tabContentVariants}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  transition={{
+                    duration: 0.3,
+                  }}
+                >
+                  {activetab && activetab?.render()}
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </div>
+        </div>
+        <div className="about-lr-container space"></div>
+        <div className="about-lr-container right">
+          <h1 className="about-r-title">Skills</h1>
+          <div>
+            <div className="about-skills-container rt">
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/html.png")}
+                  alt="HTML"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">HTML</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/css.png")}
+                  alt="CSS"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">CSS</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/react.png")}
+                  alt="React"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">React</div>
+              </div>
+            </div>
+            <div className="about-skills-container">
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/js.png")}
+                  alt="JavaScript"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">JavaScript</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/python.png")}
+                  alt="Python"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">Python</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/java.png")}
+                  alt="Java"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">Java</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/mongodb.png")}
+                  alt="MongoDB"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">MongoDB</div>
+              </div>
+            </div>
+            <div className="about-skills-container rt">
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/bot.png")}
+                  alt="Discord"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">Bots</div>
+              </div>
+
+              <div className="about-skill-item">
+                <img
+                  src={getImageUrl("about/skills/games.png")}
+                  alt="Games"
+                  className="about-skill-icon"
+                />
+                <div className="about-skill-text">Games</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+{
+  /* <div className="about-content">
         <div className="about-image-extrainfo">
           <div className="about-image-container">
             <img
@@ -294,7 +343,5 @@ export const About = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </div> */
+}

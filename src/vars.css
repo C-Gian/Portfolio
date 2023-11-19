@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "AlmaroseB";
-  src: url("src/public/fonts/AlmaroseB.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
+  font-family: "Almarose-Black";
+  src: url("src/public/fonts/Almarose-Black.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 :root {
@@ -21,5 +21,5 @@
   /* fonts */
   --font-roboto: "Roboto";
   --font-text-main: "Almarose-Thin";
-  --font-text-title: "AlmaroseB";
+  --font-text-title: "Almarose-Black";
 }
