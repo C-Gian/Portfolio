@@ -2,16 +2,132 @@
 
 .pj-container {
   display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
-  box-shadow: 0 16px 14px 0 #04152d;
-  padding: 18px 24px;
-  max-width: 345px;
+  margin-bottom: 14rem;
+  justify-content: flex-start;
 }
 
-.pg-image {
-  margin-bottom: 26px;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1700px) {
+  .project-left {
+    margin-left: 11rem;
+  }
+}
+
+.project-left {
+  align-self: flex-start;
+  margin-left: 22rem;
+}
+.project {
+  position: relative;
+  display: flex;
+  margin-bottom: 14rem;
+  justify-content: flex-start;
+}
+
+.project__image-container {
+  position: relative;
+  height: fit-content;
+  width: 50rem;
+  background-color: #3216bb;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.project__image-image {
+  width: 85%;
+  margin-top: 100px;
+  position: relative;
+}
+
+.project__image-image img {
+  width: 100%;
+}
+
+.project-left .project__info {
+  left: -8rem;
+  margin-right: -2rem;
+}
+.project__info {
+  position: relative;
+  background-color: red;
+  top: 8rem;
+  height: fit-content;
+  padding: 1rem;
+  z-index: 9999999;
+}
+
+.project__title {
+  position: relative;
+  z-index: 66;
+  font-size: 3.5rem;
+}
+
+.project__description {
+  position: relative;
+  margin-top: 3rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  z-index: 999909999;
+}
+
+.project__live-2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 1rem 1.2rem;
+  position: relative;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.project__live-2:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  background-color: #ff4d5a;
+  width: 100%;
+  bottom: 1px;
+  display: block;
+  transform-origin: bottom;
+  transition: all 0.25s;
+  z-index: -1;
+}
+
+/* .pj-precontainer {
+  position: relative;
+  width: 20rem;
+  transition: all 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+} */
+
+.pj-image-container {
+  width: 85%;
+  height: 85%;
+  position: relative;
+}
+
+.pj-image {
+  width: 100%;
 }
 
 .pg-title {

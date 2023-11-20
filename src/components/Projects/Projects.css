@@ -14,8 +14,6 @@
   height: fit-content;
   align-items: center;
   margin-top: 50px;
-  margin-left: 15%;
-  margin-right: 15%;
   overflow-x: hidden;
   gap: 60px;
   z-index: 10;
@@ -62,10 +60,10 @@
 }
 
 .projects-b-container {
-  margin-top: 50px;
+  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: fit-content;
-  gap: 200px;
+  margin-bottom: 14rem;
+  justify-content: flex-start;
+  gap: 900px;
 }
