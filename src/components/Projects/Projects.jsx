@@ -9,7 +9,7 @@ export const Projects = () => {
       <div className="projects-t-container">
         <h1>Projects</h1>
       </div>
-      <div className="projects">
+      <div className="projects-b-container">
         {projects.map((project, id) => {
           return <ProjectCard key={id} project={project}></ProjectCard>;
         })}

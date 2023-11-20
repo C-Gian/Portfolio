@@ -3,19 +3,6 @@ import { getImageUrl } from "../../utils";
 import "./About.css";
 import { AnimatePresence, motion } from "framer-motion";
 
-{
-  /* <div className="about-tab-container">
-          <div className="about-tab-skill-container">
-            
-          </div>
-          <div className="about-tab-skill-container">
-            
-          </div>
-          <div className="about-tab-skill-container">
-            
-          </div>
-        </div> */
-}
 const tabs = [
   {
     name: "tab1",
