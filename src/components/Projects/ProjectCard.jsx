@@ -6,8 +6,12 @@ export const ProjectCard = ({
   project: { title, imageSrc, description, skills, demo, source },
 }) => {
   return (
-    <div className="pj-container">
-      <img
+    <div className="pc-container">
+      <a href={source} className="pc-left-container">
+        <img src={getImageUrl(imageSrc)} alt=""></img>
+      </a>
+      <div className="pc-right-container"></div>
+      {/* <img
         src={getImageUrl(imageSrc)}
         alt={`Image of ${title} `}
         className="pg-image"
@@ -30,7 +34,7 @@ export const ProjectCard = ({
         <a href={source} className="pg-link">
           Soruce
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };

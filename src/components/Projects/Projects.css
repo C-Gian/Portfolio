@@ -17,6 +17,8 @@
   overflow-x: hidden;
   gap: 60px;
   z-index: 10;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .projects-t-container {
@@ -62,8 +64,9 @@
 .projects-b-container {
   position: relative;
   display: flex;
+  width: 100%;
   flex-direction: column;
   margin-bottom: 14rem;
   justify-content: flex-start;
-  gap: 900px;
+  gap: 100px;
 }
