@@ -1,7 +1,7 @@
 [
   {
     "title": "Air Quality Map",
-    "imageSrc": "projects/AirQualiyMap/start.png",
+    "imageSrc": "projects/AirQualiyMap/aqm.png",
     "description": "Project for environmental monitoring and analysis as a dissertation. ",
     "skills": [
       "React",
@@ -17,35 +17,35 @@
   },
   {
     "title": "Watchario",
-    "imageSrc": "projects/Watchario/watchario.jpeg",
+    "imageSrc": "projects/Watchario/watchario.png",
     "description": "Android app to let users manage their list of movies, TV series and anime.",
     "skills": ["Java", "Android Studio", "Firebase"],
     "source": "https://github.com/C-Gian/Watchario"
   },
   {
     "title": "Rhytm",
-    "imageSrc": "projects/Rhytm/start.PNG",
+    "imageSrc": "projects/Rhytm/rhytm.png",
     "description": "Discord multifunctional bot specialized in playing music from youtube",
     "skills": ["Phyton", "APIs"],
     "source": "https://github.com/C-Gian/PyDiscordMusicBot"
   },
   {
     "title": "Gameshop",
-    "imageSrc": "projects/Gameshop/project.png",
+    "imageSrc": "projects/Gameshop/gameshop.png",
     "description": "Web App for selling video games [Exam project to learn web development]",
     "skills": ["HTML", "Css", "Javascript", "JQuery", "PHP", "SQL"],
     "source": "https://github.com/C-Gian/Gameshop"
   },
   {
     "title": "Ricettario",
-    "imageSrc": "projects/Ricettario/ricettario.jpeg",
+    "imageSrc": "projects/Ricettario/ricettario.png",
     "description": "App to store and management recipes [Project to learn how to develop android applications]",
     "skills": ["Java", "Firebase", "Android Studio"],
     "source": "https://github.com/C-Gian/Ricettario"
   },
   {
     "title": "Space Shooter",
-    "imageSrc": "projects/SpaceShooter/mid.png",
+    "imageSrc": "projects/SpaceShooter/spaceshoot.png",
     "description": "First python app, simple space shooter game",
     "skills": ["Phyton"],
     "source": "https://github.com/C-Gian/PySpaceShooter"

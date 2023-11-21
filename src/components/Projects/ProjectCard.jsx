@@ -7,34 +7,31 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className="pc-container">
-      <a href={source} className="pc-left-container">
-        <img src={getImageUrl(imageSrc)} alt=""></img>
+      <a href={source} className="pc-center-container">
+        <div className="pc-left-container"></div>
+        <img src={getImageUrl(imageSrc)} alt={`Image of ${title} `}></img>
       </a>
-      <div className="pc-right-container"></div>
-      {/* <img
-        src={getImageUrl(imageSrc)}
-        alt={`Image of ${title} `}
-        className="pg-image"
-      />
-      <h3 className="pg-title">{title}</h3>
-      <p className="pg-description">{description}</p>
-      <ul className="pg-skills">
-        {skills.map((skill, id) => {
-          return (
-            <li key={id} className="pg-skill">
-              {skill}
-            </li>
-          );
-        })}
-      </ul>
-      <div className="pg-links">
-        <a href={demo} className="pg-link">
-          Demo
-        </a>
-        <a href={source} className="pg-link">
-          Soruce
-        </a>
-      </div> */}
+      <div className="pc-right-container">
+        <div className="pc-right-info">
+          <h3 className="pc-title">{title}</h3>
+          <p className="pc-description">{description}</p>
+          <ul className="pc-skills">
+            {skills.map((skill, id) => {
+              return (
+                <li key={id} className="pc-skill">
+                  {skill}
+                </li>
+              );
+            })}
+          </ul>
+          <div className="pc-source">
+            <h1>More info on </h1>
+            <a href={source} className="pc-git">
+              <img src={getImageUrl("projects/giticon.png")}></img>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
