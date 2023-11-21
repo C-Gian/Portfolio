@@ -53,6 +53,7 @@
   display: flex;
   gap: 47px;
   list-style: none;
+  color: white;
 }
 
 .nav-menuItem {
@@ -67,6 +68,10 @@
   font-size: 25px;
   color: var(--color-text);
   text-decoration: none;
+}
+
+.nav-menuItems .active {
+  color: var(--color-tertiary);
 }
 
 @media screen and (max-width: 830px) {

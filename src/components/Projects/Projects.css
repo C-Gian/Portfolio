@@ -70,3 +70,7 @@
   justify-content: flex-start;
   gap: 100px;
 }
+
+.projects-b-container:last-child {
+  margin-bottom: 0;
+}

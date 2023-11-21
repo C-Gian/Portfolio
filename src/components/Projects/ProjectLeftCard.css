@@ -1,0 +1,116 @@
+@import "../../vars.css";
+
+body {
+  color: white;
+  font-family: var(--font-text-main);
+}
+
+.pc-left-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 30rem;
+  z-index: 10;
+}
+
+.pcl-line {
+  display: flex;
+  width: 10px;
+  height: 100%;
+  background-color: var(--color-extra);
+  margin-right: 5px;
+}
+
+.pcl-l-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pcl-l-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.pcl-l-container:hover {
+  transform: scale(0.9);
+}
+
+.pcl-r-container {
+  width: 350px;
+  height: 340px;
+  z-index: 11;
+}
+
+.pcl-right-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  margin-top: 30px;
+  width: 350px;
+  height: fit-content;
+  padding: 30px 20px 30px 20px;
+  transform: translate(-20%, 0%);
+  background-color: var(--color-tertiary);
+  gap: 10px;
+}
+
+.pcl-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 0;
+}
+
+.pcl-description {
+  font-weight: 400;
+}
+
+.pcl-skills {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.pcl-skill {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--color-bg);
+  padding: 2px 22px;
+  user-select: none;
+}
+
+.pcl-source {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.pcl-source > h1 {
+  font-size: 15px;
+}
+
+.pcl-git {
+  width: auto;
+  height: 100%;
+}
+
+.pcl-git > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}

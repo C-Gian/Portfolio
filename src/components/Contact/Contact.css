@@ -1,0 +1,125 @@
+@import "../../vars.css";
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  height: 600px;
+  align-items: center;
+  margin-top: 150px;
+  margin-left: 15%;
+  margin-right: 15%;
+  overflow-x: hidden;
+  gap: 60px;
+}
+
+.contact-t-container {
+  position: relative;
+}
+
+.contact-t-container h1 {
+  font-size: 70px;
+  color: var(--color-text);
+  font-family: var(--font-text-title);
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: auto;
+  white-space: nowrap;
+  padding-bottom: 20px;
+}
+.contact-t-container h1:before {
+  background-color: #0bd7ce;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 110px;
+  margin-bottom: 5px;
+}
+.contact-t-container h1:after {
+  background-color: #fe3e57;
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  width: 110px;
+  margin-bottom: 0.25em;
+}
+
+.contact-b-container {
+  text-align: center;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+Form {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* .container {
+  color: var(--color-text);
+  margin-top: 120px;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 58px 10%;
+  gap: 10px;
+}
+
+.text h2 {
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.text p {
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 26px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .links {
+    align-items: center;
+  }
+}
+ */

@@ -1,6 +1,7 @@
 import React from "react";
 import projects from "../../data/projects.json";
-import { ProjectCard } from "./ProjectCard";
+import { ProjectLeftCard } from "./ProjectLeftCard";
+import { ProjectRightCard } from "./ProjectRightCard";
 import "./Projects.css";
 
 export const Projects = () => {
@@ -11,7 +12,14 @@ export const Projects = () => {
       </div>
       <div className="projects-b-container">
         {projects.map((project, id) => {
-          return <ProjectCard key={id} project={project}></ProjectCard>;
+          if (id % 2 == 0) {
+            return (
+              <ProjectLeftCard key={id} project={project}></ProjectLeftCard>
+            );
+          }
+          return (
+            <ProjectRightCard key={id} project={project}></ProjectRightCard>
+          );
         })}
       </div>
     </section>
