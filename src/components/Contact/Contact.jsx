@@ -4,7 +4,7 @@ import { getImageUrl } from "../../utils";
 import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-const TEMPLATE_ID = "diocane";
+const TEMPLATE_ID = "template_id";
 const SERVICE_ID = "service_8euts8m";
 const PUBLIC_KEY = "3IQVV8Ar9TJZwew5b";
 
@@ -18,6 +18,8 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const button = document.getElementById("xd"); // Sostituisci con l'id o una referenza del tuo pulsante
+    button.classList.add("activeLoading");
     const serviceId = SERVICE_ID;
     const templateId = TEMPLATE_ID;
     try {
@@ -32,6 +34,7 @@ export const Contact = () => {
       console.log(error);
     } finally {
       setLoading(false);
+      button.classList.remove("activeLoading");
     }
   };
 
@@ -41,22 +44,22 @@ export const Contact = () => {
         <h1>Contact</h1>
       </div>
       <div className="contact-b-container">
-        <form className="for" onSubmit={handleSubmit}>
-          <div className="form_group">
-            <label htmlFor="">name</label>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="contact-input">
             <input ref={nameRef} placeholder="enter your name" />
           </div>
-          <div className="form_group">
-            <label htmlFor="">email</label>
+          <div className="contact-input">
             <input ref={emailRef} type="email" placeholder="enter your email" />
           </div>
-          <div className="form_group">
-            <label htmlFor="">message</label>
+          <div className="contact-input message">
             <input ref={messageRef} placeholder="enter your message" />
           </div>
-          <button className="btn" disabled={loading}>
-            subscribe
+          <button id="xd">
+            Load <span class="load loading" disabled={loading}></span>
           </button>
+          {/* <button className="contact-button" disabled={loading}>
+            subscribe
+          </button> */}
         </form>
         {/* <Form onSubmit={handleOnSubmit}>
           <Form.Field
