@@ -11,6 +11,7 @@ const PUBLIC_KEY = "3IQVV8Ar9TJZwew5b";
 export const Contact = () => {
   const emailRef = useRef();
   const nameRef = useRef();
+  const messageRef = useRef();
   const [loading, setLoading] = useState(false);
 
   useEffect(() => emailjs.init(PUBLIC_KEY), []);
@@ -23,7 +24,8 @@ export const Contact = () => {
       setLoading(true);
       await emailjs.send(serviceId, templateId, {
         name: nameRef.current.value,
-        recipient: emailRef.current.value,
+        email: emailRef.current.value,
+        message: messageRef.current.value,
       });
       alert("email successfully sent check inbox");
     } catch (error) {
@@ -47,6 +49,10 @@ export const Contact = () => {
           <div className="form_group">
             <label htmlFor="">email</label>
             <input ref={emailRef} type="email" placeholder="enter your email" />
+          </div>
+          <div className="form_group">
+            <label htmlFor="">message</label>
+            <input ref={messageRef} placeholder="enter your message" />
           </div>
           <button className="btn" disabled={loading}>
             subscribe
