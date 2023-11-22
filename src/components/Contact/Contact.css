@@ -49,7 +49,7 @@
 }
 
 .contact-b-container {
-  width: fit-content;
+  width: 100%;
   margin: 20px auto;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
 }
 
 .contact-input > input {
-  width: 40rem;
+  width: 100%;
   resize: none;
   border: none;
   color: inherit;
@@ -119,6 +119,8 @@ input::placeholder {
   background: var(--color-tertiary);
   color: #fff;
   overflow: hidden;
+  text-align: center;
+  line-height: normal;
 }
 
 .contact-bs {
@@ -190,4 +192,10 @@ input::placeholder {
 
 .button-error {
   background-color: #e25141;
+}
+
+@media screen and (max-width: 500px) {
+  .contact-t-container > h1 {
+    font-size: 13vw;
+  }
 }

@@ -3,7 +3,6 @@ import "./Navbar.css";
 import { getImageUrl } from "../../utils";
 
 export const Navbar = () => {
-  const [menuOpen, setmenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const aboutRef = useRef(null);
   const projectsRef = useRef(null);
@@ -24,7 +23,7 @@ export const Navbar = () => {
       contactRef.current = contactElement ? contactElement : null;
 
       // Determina la sezione attiva
-      const scrollPosition = window.scrollY + 50; // Considera lo scroll padding
+      const scrollPosition = window.scrollY + 150; // Considera lo scroll padding
       if (
         aboutRef.current &&
         scrollPosition >= aboutRef.current.offsetTop &&
@@ -65,20 +64,7 @@ export const Navbar = () => {
           <h1 className="nav-title">&gt;</h1>
         </a>
         <div className="nav-menu">
-          <img
-            className="nav-menuBtn"
-            src={
-              menuOpen
-                ? getImageUrl("nav/closeIcon.png")
-                : getImageUrl("nav/nav-menuIcon.png")
-            }
-            alt="nav-menu-button"
-            onClick={() => setmenuOpen(!menuOpen)}
-          />
-          <ul
-            className={`nav-menuItems ${menuOpen ? "nav-menuOpen" : ""}`}
-            onClick={() => setmenuOpen(false)}
-          >
+          <ul className="nav-menuItems">
             <li>
               <a
                 href="#about"

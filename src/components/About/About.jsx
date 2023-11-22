@@ -178,10 +178,9 @@ export const About = () => {
             </div>
           </div>
         </div>
-        <div className="about-lr-container space"></div>
         <div className="about-lr-container right">
           <h1 className="about-r-title">Skills</h1>
-          <div>
+          <div className="about-sc-container">
             <div className="about-skills-container rt">
               <div className="about-skill-item">
                 <img

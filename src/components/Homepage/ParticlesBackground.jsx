@@ -1,10 +1,26 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 export const ParticlesBackground = ({ type }) => {
+  const [particlesKey, setParticlesKey] = useState(0); // Aggiungi uno stato per forzare il reinizializzazione
+
   const init = useCallback(async (engine) => {
     await loadFull(engine);
+  }, []);
+
+  // Aggiungi l'ascolto dell'evento di ridimensionamento della finestra
+  useEffect(() => {
+    const handleResize = () => {
+      // Aggiorna la chiave per forzare il reinizializzazione
+      setParticlesKey((prevKey) => prevKey + 1);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const option =
@@ -86,7 +102,33 @@ export const ParticlesBackground = ({ type }) => {
           },
           responsive: [
             {
-              maxWidth: 1200,
+              breakpoint: 2000,
+              options: {
+                particles: {
+                  size: {
+                    value: 5,
+                    anim: {
+                      speed: 4,
+                    },
+                  },
+                },
+              },
+            },
+            {
+              breakpoint: 1200,
+              options: {
+                particles: {
+                  size: {
+                    value: 5,
+                    anim: {
+                      speed: 4,
+                    },
+                  },
+                },
+              },
+            },
+            {
+              breakpoint: 400,
               options: {
                 particles: {
                   size: {
@@ -158,7 +200,29 @@ export const ParticlesBackground = ({ type }) => {
           },
           responsive: [
             {
+              maxWidth: 1920,
+              options: {
+                particles: {
+                  size: {
+                    value: 5,
+                    anim: {
+                      speed: 4,
+                    },
+                  },
+                },
+              },
               maxWidth: 1200,
+              options: {
+                particles: {
+                  size: {
+                    value: 5,
+                    anim: {
+                      speed: 4,
+                    },
+                  },
+                },
+              },
+              maxWidth: 400,
               options: {
                 particles: {
                   size: {
@@ -176,6 +240,7 @@ export const ParticlesBackground = ({ type }) => {
         };
   return (
     <Particles
+      key={particlesKey}
       init={init}
       options={option}
       id={type == "home" ? "tsparticles-home" : "tsparticles-main"}

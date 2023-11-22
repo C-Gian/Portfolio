@@ -42,7 +42,7 @@
 }
 
 .home-title {
-  font-size: 72px;
+  font-size: 5vw;
   font-weight: 900;
   white-space: nowrap;
   font-family: var(--font-text-main);
@@ -52,13 +52,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.home-subtitle {
-  font-size: 50px;
-  font-weight: 600;
-  white-space: nowrap;
-  font-family: var(--font-text-title);
 }
 
 .home-arrow:before {
@@ -111,12 +104,8 @@
   }
 }
 
-@media screen and (max-width: 830px) {
-  .home-container {
-    flex-direction: column-reverse;
-  }
-
-  .home-content {
-    align-items: center;
+@media screen and (max-width: 550px) {
+  .home-hack-text {
+    flex-direction: column;
   }
 }

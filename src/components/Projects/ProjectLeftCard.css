@@ -55,7 +55,7 @@ body {
   margin-top: 30px;
   width: 350px;
   height: fit-content;
-  padding: 30px 20px 30px 20px;
+  padding: 25px 15px 25px 15px;
   transform: translate(-20%, 0%);
   background-color: var(--color-tertiary);
   gap: 10px;
@@ -113,4 +113,133 @@ body {
   object-fit: cover;
   object-position: center;
   display: block;
+}
+
+@media screen and (max-width: 1400px) {
+  .pc-left-container {
+    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projects-b-container {
+    justify-content: center !important;
+    align-items: center;
+  }
+  .pc-left-container {
+    height: 20rem;
+    width: fit-content;
+  }
+  .pcl-right-info {
+    width: 350px;
+    transform: translate(-10%, 0%);
+  }
+  .pcl-title {
+    font-size: 2vw;
+  }
+
+  .pcl-skill {
+    font-size: 1vw;
+  }
+
+  .pcl-source > h1 {
+    font-size: 1.2vw;
+  }
+
+  .pcl-description {
+    font-size: 1.3vw;
+  }
+}
+
+@media screen and (max-width: 1060px) {
+  .pc-left-container {
+    height: 20rem;
+  }
+  .pcl-r-container {
+    height: 100%;
+    width: auto;
+  }
+  .pcl-right-info {
+    width: 300px;
+    position: relative;
+    transform: translate(0%, 0%);
+    margin-top: 0;
+    height: 100%;
+  }
+  .pcl-title {
+    font-size: 3vw;
+  }
+
+  .pcl-skill {
+    font-size: 1.5vw;
+  }
+
+  .pcl-source > h1 {
+    font-size: 1.5vw;
+  }
+
+  .pcl-description {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .pc-left-container {
+    height: 15rem;
+  }
+  .pcl-r-container {
+    height: 100%;
+    width: auto;
+  }
+  .pcl-right-info {
+    position: relative;
+    transform: translate(0%, 0%);
+    margin-top: 0;
+    height: 100%;
+  }
+  .pcl-title {
+    font-size: 2vw;
+  }
+
+  .pcl-skill {
+    font-size: 1.2vw;
+  }
+
+  .pcl-source > h1 {
+    font-size: 1.5vw;
+  }
+
+  .pcl-description {
+    font-size: 1.5vw;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .pc-left-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .pcl-r-container {
+    width: 100%;
+    height: fit-content;
+  }
+  .pcl-right-info {
+    width: 100%;
+    height: fit-content;
+  }
+  .pcl-title {
+    font-size: 3vw;
+  }
+
+  .pcl-skill {
+    font-size: 2vw;
+  }
+
+  .pcl-source > h1 {
+    font-size: 1.5vw;
+  }
+
+  .pcl-description {
+    font-size: 2vw;
+  }
 }
