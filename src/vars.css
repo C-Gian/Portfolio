@@ -8,6 +8,11 @@
   src: url("src/public/fonts/Almarose-Black.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
+@font-face {
+  font-family: "Almarose-Thin";
+  src: url("src/public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
+}
+
 :root {
   /*colors*/
   --color-text: #fff;
@@ -22,4 +27,5 @@
   --font-roboto: "Roboto";
   --font-text-main: "Almarose-Thin";
   --font-text-title: "Almarose-Black";
+  --font-text-light: "Almarose-Thin";
 }

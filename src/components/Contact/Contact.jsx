@@ -47,20 +47,20 @@ export const Contact = () => {
   };
 
   return (
-    <section className="contact-container">
+    <section className="contact-container" id="contact">
       <div className="contact-t-container">
         <h1>Contact</h1>
       </div>
       <div className="contact-b-container">
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="contact-input">
-            <input ref={nameRef} placeholder="enter your name" />
+            <input ref={nameRef} placeholder="Name" />
           </div>
           <div className="contact-input">
-            <input ref={emailRef} type="email" placeholder="enter your email" />
+            <input ref={emailRef} type="email" placeholder="Email" />
           </div>
           <div className="contact-input message">
-            <input ref={messageRef} placeholder="enter your message" />
+            <input ref={messageRef} placeholder="Message" />
           </div>
           <button id="submit_button" className="contact-button">
             Submit<span className="contact-bs" disabled={loading}></span>

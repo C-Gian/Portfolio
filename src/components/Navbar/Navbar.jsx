@@ -24,7 +24,7 @@ export const Navbar = () => {
       contactRef.current = contactElement ? contactElement : null;
 
       // Determina la sezione attiva
-      const scrollPosition = window.scrollY + 200; // Considera lo scroll padding
+      const scrollPosition = window.scrollY + 50; // Considera lo scroll padding
       if (
         aboutRef.current &&
         scrollPosition >= aboutRef.current.offsetTop &&
