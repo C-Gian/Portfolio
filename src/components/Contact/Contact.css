@@ -57,7 +57,6 @@
 }
 
 .contact-form {
-  width: 700px;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -109,22 +108,20 @@ input::placeholder {
   /* Aggiungi altri stili desiderati */
 }
 
-button {
-  padding: 20px 30px;
+.contact-button {
+  padding: 1rem;
   font-size: 1.5em;
-  width: 200px;
+  width: 100%;
   cursor: pointer;
   border: 0px;
   position: relative;
-  margin: 20px;
   transition: all 0.25s ease;
-  background: rgba(116, 23, 231, 1);
+  background: var(--color-tertiary);
   color: #fff;
   overflow: hidden;
-  border-radius: 10px;
 }
 
-.load {
+.contact-bs {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -137,7 +134,7 @@ button {
   border-radius: inherit;
 }
 
-.load::after {
+.contact-bs::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -150,7 +147,7 @@ button {
   z-index: 10;
 }
 
-.load::before {
+.contact-bs::before {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -159,11 +156,11 @@ button {
   height: 30px;
   border-left: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  animation: loading1 2s linear infinite;
+  animation: loading 2s linear infinite;
   z-index: 5;
 }
 
-@keyframes loading1 {
+@keyframes loading {
   0% {
     transform: rotate(0deg);
   }
@@ -173,21 +170,26 @@ button {
   }
 }
 
-button.active {
+.contact-button.active {
   transform: scale(0.85);
 }
 
-button.activeLoading .loading {
+.contact-button.activeLoading .contact-bs {
   visibility: visible;
   opacity: 1;
 }
 
-button .loading {
+.contact-button .contact-bs {
   opacity: 0;
   visibility: hidden;
 }
 
-.contact-button {
+.button-ok {
+  background-color: #33b249;
+}
+
+.button-error {
+  background-color: #e25141;
 }
 
 /* .container {

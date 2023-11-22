@@ -18,7 +18,7 @@ export const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const button = document.getElementById("xd"); // Sostituisci con l'id o una referenza del tuo pulsante
+    const button = document.getElementById("submit_button"); // Sostituisci con l'id o una referenza del tuo pulsante
     button.classList.add("activeLoading");
     const serviceId = SERVICE_ID;
     const templateId = TEMPLATE_ID;
@@ -29,12 +29,20 @@ export const Contact = () => {
         email: emailRef.current.value,
         message: messageRef.current.value,
       });
-      alert("email successfully sent check inbox");
+      //alert("email successfully sent check inbox");
+      button.classList.add("button-ok");
+      button.textContent = "Success!";
     } catch (error) {
-      console.log(error);
+      button.classList.add("button-error");
+      button.textContent = "Error!";
     } finally {
-      setLoading(false);
       button.classList.remove("activeLoading");
+      setTimeout(() => {
+        setLoading(false);
+        button.classList.remove("button-ok");
+        button.classList.remove("button-error");
+        button.textContent = "Submit";
+      }, 3000);
     }
   };
 
@@ -54,8 +62,8 @@ export const Contact = () => {
           <div className="contact-input message">
             <input ref={messageRef} placeholder="enter your message" />
           </div>
-          <button id="xd">
-            Load <span class="load loading" disabled={loading}></span>
+          <button id="submit_button" className="contact-button">
+            Submit<span className="contact-bs" disabled={loading}></span>
           </button>
           {/* <button className="contact-button" disabled={loading}>
             subscribe
