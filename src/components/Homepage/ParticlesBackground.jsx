@@ -200,29 +200,7 @@ export const ParticlesBackground = ({ type }) => {
           },
           responsive: [
             {
-              maxWidth: 1920,
-              options: {
-                particles: {
-                  size: {
-                    value: 5,
-                    anim: {
-                      speed: 4,
-                    },
-                  },
-                },
-              },
               maxWidth: 1200,
-              options: {
-                particles: {
-                  size: {
-                    value: 5,
-                    anim: {
-                      speed: 4,
-                    },
-                  },
-                },
-              },
-              maxWidth: 400,
               options: {
                 particles: {
                   size: {

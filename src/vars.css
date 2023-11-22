@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Almarose-Thin";
-  src: url("src/public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
+  src: url("./public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 @font-face {
   font-family: "Almarose-Black";
-  src: url("src/public/fonts/Almarose-Black.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
+  src: url("./public/fonts/Almarose-Black.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 @font-face {
   font-family: "Almarose-Thin";
-  src: url("src/public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
+  src: url("./public/fonts/Almarose-Thin.otf") format("opentype"); /* Assicurati di specificare il formato corretto */
 }
 
 :root {
